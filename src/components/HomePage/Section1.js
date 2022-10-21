@@ -3,6 +3,7 @@ import dp from "../../img/dp.png";
 import gif from "../../img/gif.gif";
 import $ from "jquery";
 import { IoIosClose } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const scroll = document.querySelector("html");
 
@@ -46,7 +47,9 @@ const Section1 = () => {
                 consequatur numquam aliquid ea ut molestiae asperiores rem ad
                 error eius sequi omnis?
               </p>
-              <button className="uk-button hover-btn">Read More . . .</button>
+              <Link to="/about">
+                <button className="uk-button hover-btn">Read More . . .</button>
+              </Link>
             </div>
           </div>
         </div>

@@ -28,14 +28,14 @@ const Footer = () => {
             <div>
               <ul className="uk-navbar-nav">
                 <li>
-                  <Link to="/">Home</Link>
+                  <Link to="/home">Home</Link>
                 </li>
 
                 <li>
-                  <Link to="/blog">Blog</Link>
+                  <Link to="/about">About</Link>
                 </li>
                 <li>
-                  <Link to="/about">About</Link>
+                  <Link to="/project">Projects</Link>
                 </li>
                 <li>
                   <Link to="/contact">Contact</Link>

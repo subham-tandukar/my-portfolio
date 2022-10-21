@@ -77,19 +77,20 @@ const Navbar = () => {
           <div className="uk-navbar-right uk-visible@s">
             <ul className="uk-navbar-nav">
               <li>
-                <NavLink to="/" activeclassname="active">
+                <NavLink to="/home" activeclassname="active">
                   Home
                 </NavLink>
               </li>
 
               <li>
-                <NavLink to="/blog" activeclassname="active">
-                  Blog
-                </NavLink>
-              </li>
-              <li>
                 <NavLink to="/about" activeclassname="active">
                   About
+                </NavLink>
+              </li>
+
+              <li>
+                <NavLink to="/project" activeclassname="active">
+                  Projects
                 </NavLink>
               </li>
               <li>
@@ -136,20 +137,19 @@ const Navbar = () => {
 
             <ul className="uk-navbar-nav uk-flex-column">
               <li>
-                <Link to="/" onClick={handleClick}>
+                <Link to="/home" onClick={handleClick}>
                   Home
-                </Link>
-              </li>
-
-              <li>
-                <Link to="/blog" onClick={handleClick}>
-                  Blog
                 </Link>
               </li>
 
               <li>
                 <Link to="/about" onClick={handleClick}>
                   About
+                </Link>
+              </li>
+              <li>
+                <Link to="/project" onClick={handleClick}>
+                  Projects
                 </Link>
               </li>
               <li>

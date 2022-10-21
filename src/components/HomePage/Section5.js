@@ -1,5 +1,6 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
+import { Link } from "react-router-dom";
 
 const Section5 = () => {
   return (
@@ -17,9 +18,11 @@ const Section5 = () => {
             }}
           />
 
-          <button className="uk-button hover-btn uk-margin-top">
-            View All . . .
-          </button>
+          <Link to="/project">
+            <button className="uk-button hover-btn uk-margin-top">
+              View All . . .
+            </button>
+          </Link>
         </div>
       </div>
     </>
