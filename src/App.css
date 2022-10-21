@@ -1301,4 +1301,12 @@ button {
   .footer .uk-navbar-nav {
     margin-right: 1rem;
   }
+  .edu .edu-info::after,
+.edu .exp-info::after,
+.exp .edu-info::after,
+.exp .exp-info::after,
+.edu-logo,
+.exp-logo {
+    display: none;
+  }
 }/*# sourceMappingURL=App.css.map */
