@@ -26,7 +26,7 @@ const Section2 = () => {
 
   return (
     <>
-      <div className="about-info uk-container uk-container-expand">
+      <div className="about-info">
         <div className="form-stepper">
           <Stepper
             activeStep={currentStep - 1}

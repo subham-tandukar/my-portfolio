@@ -14,9 +14,9 @@ const Section6 = () => {
         </h5>
       </div>
 
-      <div className="contact uk-grid uk-child-width-1-2 uk-margin-medium-top">
+      <div className="contact uk-grid uk-child-width-1-2@l uk-margin-medium-top">
         <div>
-          <div className="uk-flex uk-flex-middle uk-flex-wrap">
+          <div className="uk-flex uk-flex-middle uk-flex-wrap uk-flex-around">
             <div className="contact-info">
               <h5>Let's get in touch</h5>
 
@@ -62,7 +62,7 @@ const Section6 = () => {
           </div>
         </div>
 
-        <div className="uk-overflow-hidden">
+        <div className="uk-overflow-hidden map">
           <h5 className="uk-margin-bottom">View on Map</h5>
 
           <iframe

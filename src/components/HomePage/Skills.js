@@ -27,8 +27,8 @@ const Skills = () => {
 
   return (
     <>
-      <div className="uk-container uk-container-expand uk-position-relative wrap">
-        <div className="uk-grid uk-child-width-1-2 skill">
+      <div className=" uk-position-relative wrap">
+        <div className="uk-grid uk-child-width-1-2@s skill">
           <div className="b">
             <div className="skill-bar l">
               <div className="uk-margin-top">
@@ -125,7 +125,7 @@ const Skills = () => {
             </div>
           </div>
 
-          <div className="b">
+          <div className="b rb">
             <div className="skill-bar r">
               <div className="uk-margin-top">
                 <div className="uk-flex uk-flex-middle skill-txt">

@@ -1,9 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 $primary: #03041c;
 $transition: all 0.3s cubic-bezier(0.21, 0.6, 0.44, 2.18);
 $transition2: all 0.3s ease-in-out;
 
 @import url("https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700");
+
+html {
+  scroll-behavior: smooth;
+}
 
 body,
 h1,
@@ -47,6 +57,10 @@ span {
     color: #fff;
     transform: translateX(10px);
   }
+  &:hover svg {
+    color: #fff !important;
+    transform: translateX(10px) !important;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -89,7 +103,7 @@ span {
   .head-1 {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    padding-left: 40px;
+    padding-left: 50px;
     a {
       color: #000;
       display: inline-block;
@@ -124,6 +138,36 @@ span {
 
 .uk-navbar-container:not(.uk-navbar-transparent) {
   background: #fff;
+}
+
+.uk-offcanvas-bar {
+  background: rgba(3, 4, 28, 1);
+}
+
+#offcanvas-push {
+  .uk-navbar-nav {
+    margin-top: 2rem;
+    li {
+      a {
+        min-height: 50px;
+        justify-content: start;
+        color: #fff;
+        transition: $transition;
+        position: relative;
+        z-index: 1000;
+
+        &:hover {
+          transform: translateX(10px);
+        }
+      }
+    }
+  }
+}
+.uk-offcanvas-overlay::before {
+  backdrop-filter: blur(2px);
+}
+.block {
+  display: block !important;
 }
 
 .dp {
@@ -372,10 +416,14 @@ span {
 .info {
   h1 {
     font-weight: bold;
+    font-size: 30px;
   }
   p {
     color: #555;
   }
+}
+.ham-menu {
+  border: none;
 }
 
 marquee {
@@ -385,7 +433,7 @@ marquee {
 }
 
 .wrap {
-  min-height: 430px;
+  overflow-x: hidden;
 }
 
 .form-stepper {
@@ -401,14 +449,16 @@ marquee {
   height: 1.3em !important;
 }
 
-.css-eglki6-MuiLinearProgress-root {
+.css-eglki6-MuiLinearProgress-root,
+.css-7p5u54 {
   background-color: transparent !important;
   height: 9px !important;
   border-radius: 500px;
   margin-top: 1rem !important;
 }
 
-.css-5xe99f-MuiLinearProgress-bar1 {
+.css-5xe99f-MuiLinearProgress-bar1,
+.css-t752vm {
   background-color: $primary !important;
 }
 
@@ -474,16 +524,19 @@ marquee {
 .next {
   background: transparent;
   transition: $transition2;
+  padding: 0;
 }
 
 .prev {
   transform: rotate(90deg);
+  margin-left: 1rem;
   &:hover {
     transform: rotate(0deg);
   }
 }
 .next {
   transform: rotate(-90deg);
+  margin-right: 1rem;
   &:hover {
     transform: rotate(0deg);
   }
@@ -526,7 +579,6 @@ marquee {
 
 .edu,
 .exp {
-  height: 430px;
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
@@ -580,8 +632,6 @@ marquee {
 }
 
 .resume-img {
-  height: 300px;
-
   .animate {
     animation: animate 2s ease-in-out infinite alternate-reverse both;
   }
@@ -603,6 +653,8 @@ marquee {
   width: max-content;
   background: transparent;
   text-transform: capitalize;
+  position: relative;
+  z-index: 1;
 
   .animate-btn {
     animation: animateBtn 1s ease-in-out infinite alternate-reverse both;
@@ -762,6 +814,7 @@ marquee {
   margin-top: 5rem;
   height: 50vh;
   background-image: url(./img/project.jpg);
+  background-position: right;
   background-attachment: fixed;
   background-size: cover;
   position: relative;
@@ -905,3 +958,53 @@ marquee {
     }
   }
 }
+
+.go-to-top {
+  cursor: pointer;
+  display: inline-block;
+  right: 10px;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  z-index: 1024;
+  transition: all 1s cubic-bezier(0.21, 0.6, 0.44, 2.18);
+
+  .go-to-top-icon {
+    font-size: 20px !important;
+    background: $primary;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    color: #fff;
+    line-height: 40px;
+    transition: $transition;
+    display: inline-block;
+    border: 1px solid #fff;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+}
+
+// .pre-loader {
+//   background: #fff url(../src/img/gif.gif) no-repeat center center;
+//   height: 100vh;
+//   width: 100%;
+//   position: fixed;
+//   z-index: 100000;
+//   background-size:50% 50% cover;
+// }
+
+.error-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+@import "responsive";

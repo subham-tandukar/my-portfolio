@@ -20,9 +20,9 @@ const Experience = () => {
   };
   return (
     <>
-      <div className="uk-container uk-container-expand uk-position-relative wrap">
-        <div className="uk-grid uk-child-width-1-2 exp">
-          <div className="b">
+      <div className=" uk-position-relative wrap">
+        <div className="uk-grid exp">
+          <div className="b uk-width-1-2@l uk-visible@l ">
             <div
               className="exp-img l"
               uk-scrollspy="cls: uk-animation-fade; delay: 500"
@@ -31,8 +31,8 @@ const Experience = () => {
             </div>
           </div>
 
-          <div>
-            <div className="exp-info r uk-flex uk-flex-middle">
+          <div className="uk-width-1-2@l exp-wrap">
+            <div className="exp-info  uk-flex uk-flex-middle">
               <div className="exp-logo">
                 <MdWork className="logo-wrap" />
               </div>
@@ -50,7 +50,7 @@ const Experience = () => {
               </div>
             </div>
 
-            <div className="exp-info r uk-flex uk-flex-middle">
+            <div className="exp-info  uk-flex uk-flex-middle">
               <div className="exp-logo">
                 <MdWork className="logo-wrap" />
               </div>
@@ -70,7 +70,7 @@ const Experience = () => {
               </div>
             </div>
 
-            <div className="exp-info r uk-flex uk-flex-middle">
+            <div className="exp-info  uk-flex uk-flex-middle">
               <div className="exp-logo">
                 <MdWork className="logo-wrap" />
               </div>

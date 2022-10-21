@@ -47,7 +47,7 @@ const Footer = () => {
 
         <div className="foot">
           <div className="uk-grid ">
-            <div className="social-links uk-width-expand">
+            <div className="social-links  uk-width-1-1  uk-width-1-2@s">
               <a
                 href="https://www.facebook.com/subham.tandukar.3/"
                 uk-tooltip="title: Facebook"
@@ -71,7 +71,7 @@ const Footer = () => {
               </a>
             </div>
 
-            <div className="copyright uk-width-1-3">
+            <div className="copyright uk-width-1-1 uk-width-1-2@s">
               <span>
                 Copyright &copy; 2022 by <strong>Aniket.</strong> All Rights
                 Reserved.

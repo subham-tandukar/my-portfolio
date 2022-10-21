@@ -20,9 +20,9 @@ const Education = () => {
   };
   return (
     <>
-      <div className="uk-container uk-container-expand uk-position-relative wrap">
-        <div className="uk-grid uk-child-width-1-2 edu ">
-          <div className="b">
+      <div className="uk-position-relative wrap">
+        <div className="uk-grid edu ">
+          <div className="b uk-width-1-2@l uk-visible@l">
             <div
               className="edu-img l"
               uk-scrollspy="cls: uk-animation-fade; delay: 500"
@@ -31,8 +31,8 @@ const Education = () => {
             </div>
           </div>
 
-          <div>
-            <div className="edu-info r uk-flex uk-flex-middle">
+          <div className="uk-width-1-2@l edu-wrap">
+            <div className="edu-info  uk-flex uk-flex-middle">
               <div className="edu-logo">
                 <FaGraduationCap className="logo-wrap" />
               </div>
@@ -49,7 +49,7 @@ const Education = () => {
               </div>
             </div>
 
-            <div className="edu-info r uk-flex uk-flex-middle">
+            <div className="edu-info  uk-flex uk-flex-middle">
               <div className="edu-logo">
                 <FaGraduationCap className="logo-wrap" />
               </div>
@@ -68,7 +68,7 @@ const Education = () => {
               </div>
             </div>
 
-            <div className="edu-info r uk-flex uk-flex-middle">
+            <div className="edu-info uk-flex uk-flex-middle">
               <div className="edu-logo">
                 <FaGraduationCap className="logo-wrap" />
               </div>

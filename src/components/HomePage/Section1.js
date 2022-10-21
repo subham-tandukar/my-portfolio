@@ -3,16 +3,10 @@ import dp from "../../img/dp.png";
 import gif from "../../img/gif.gif";
 import $ from "jquery";
 import { IoIosClose } from "react-icons/io";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const scroll = document.querySelector("html");
 
 const Section1 = () => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
-
   $(function () {
     $(".small-image").click(function () {
       var path = $(this).attr("src");
@@ -27,7 +21,7 @@ const Section1 = () => {
   });
   return (
     <>
-      <section className="main">
+      <section className="main" id="home">
         <div className="uk-container uk-container-expand">
           <div className="uk-grid uk-child-width-1-2@s uk-flex-middle">
             <div>
@@ -52,15 +46,7 @@ const Section1 = () => {
                 consequatur numquam aliquid ea ut molestiae asperiores rem ad
                 error eius sequi omnis?
               </p>
-              <button
-                className="uk-button hover-btn"
-                data-aos="flip-left"
-                data-aos-easing="ease-out-cubic"
-                data-aos-duration="2000"
-                data-aos-delay="1500"
-              >
-                Read More . . .
-              </button>
+              <button className="uk-button hover-btn">Read More . . .</button>
             </div>
           </div>
         </div>
