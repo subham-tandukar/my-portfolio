@@ -11,7 +11,7 @@ const ErrorPage = () => {
         </marquee>
         <h1>404 Page Not Found</h1>
         <Link to="/home" className="uk-button hover-btn">
-          Redirect to Login Page
+          Redirect to Home Page
         </Link>
       </div>
     </>
