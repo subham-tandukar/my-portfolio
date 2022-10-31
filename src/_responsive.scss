@@ -66,6 +66,11 @@ $transition2: all 0.3s ease-in-out;
   .all-project-bg {
     margin-top: 3rem;
   }
+  .project_details {
+    h3 {
+      margin-top: 2rem;
+    }
+  }
 }
 
 @media (max-width: 766.9px) {
@@ -200,6 +205,15 @@ $transition2: all 0.3s ease-in-out;
       .social-links {
         padding-left: 60px;
       }
+    }
+  }
+  .txt {
+    font-size: 24px;
+  }
+  .breadcrumb {
+    padding: 1rem 0;
+    h3 {
+      font-size: 20px;
     }
   }
 }

@@ -136,16 +136,16 @@ span {
   }
 }
 
-.uk-navbar-nav>li:hover>a{
+.uk-navbar-nav > li:hover > a {
   transition: $transition;
 }
 
-.uk-navbar-nav>li:hover>a:hover{
+.uk-navbar-nav > li:hover > a:hover {
   transform: translateX(10px);
   color: $primary;
   font-weight: bold;
 }
-footer .uk-navbar-nav>li:hover>a:hover{
+footer .uk-navbar-nav > li:hover > a:hover {
   transform: translateX(10px);
   color: #fff;
   font-weight: bold;
@@ -725,6 +725,27 @@ marquee {
   }
 }
 
+.breadcrumb {
+  background: $primary;
+  padding: 2rem 0;
+  margin-bottom: 3rem;
+
+  h3 {
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+  }
+  span,
+  a {
+    color: #fff;
+    transition: $transition2;
+  }
+  a:hover {
+    text-decoration: none;
+    transform: translateX(5px);
+  }
+}
+
 .projects {
   margin-top: 3rem;
   margin-bottom: 3rem;
@@ -1025,6 +1046,76 @@ marquee {
   top: 0;
   left: 0;
   background: #fff;
+}
+
+.about_page {
+  padding-bottom: 3rem;
+  .skill-button {
+    display: none;
+  }
+}
+.project_page {
+  padding-bottom: 3rem;
+  .project-wrapper {
+    .project-content {
+      cursor: pointer;
+      transform: perspective(750px) translate3d(0px, 0px, -250px) rotateX(27deg)
+        scale(0.9, 0.9);
+      border-radius: 20px;
+
+      box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.2);
+      transition: 0.4s ease-in-out transform;
+
+      a {
+        display: block;
+      }
+
+      span {
+        margin: 0;
+        padding: 1rem;
+        display: inline-block;
+        transition: $transition2;
+        color: #000;
+
+        &:hover {
+          transform: translateX(10px);
+          text-decoration: none;
+        }
+      }
+
+      &:hover {
+        transform: translate3d(0px, 0px, -250px);
+      }
+    }
+  }
+}
+
+.project_details {
+  overflow: hidden;
+  img {
+    cursor: pointer;
+    transition: $transition2;
+
+    &:hover {
+      transform: scale(0.9);
+    }
+  }
+  p {
+    color: #555;
+  }
+  h3 {
+    font-weight: bold;
+    color: $primary;
+  }
+  .project-link {
+    display: inline-block;
+    margin-right: 1rem;
+    transition: $transition;
+
+    &:hover {
+      transform: translateY(-10px);
+    }
+  }
 }
 
 @import "responsive";

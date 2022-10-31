@@ -17,7 +17,7 @@ const Section6 = () => {
       <div className="contact uk-grid uk-child-width-1-2@l uk-margin-medium-top">
         <div>
           <div className="uk-flex uk-flex-middle uk-flex-wrap uk-flex-around">
-            <div className="contact-info">
+            <div className="contact-info" uk-scrollspy="cls: uk-animation-slide-left">
               <h5>Let's get in touch</h5>
 
               <div className="uk-flex uk-flex-middle uk-flex-wrap uk-margin-medium-top">
@@ -56,7 +56,7 @@ const Section6 = () => {
               </div>
             </div>
 
-            <div className="contact-img">
+            <div className="contact-img"   uk-scrollspy="cls: uk-animation-fade; delay: 500">
               <img src={contact} alt="" />
             </div>
           </div>
