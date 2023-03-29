@@ -8,7 +8,7 @@ const GoTop = () => {
     var hh = $(document).scrollTop();
     if (hh > h / 1.5) {
       $("#top").css({
-        top: "77%",
+        top: "88%",
         opacity: "1",
         visibility: "visible",
         transform: "scale(1)",

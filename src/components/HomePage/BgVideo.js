@@ -1,6 +1,6 @@
 import React from "react";
 
-const Section3 = () => {
+const BgVideo = () => {
   return (
     <>
       <div className="code"></div>
@@ -8,4 +8,4 @@ const Section3 = () => {
   );
 };
 
-export default Section3;
+export default BgVideo;

@@ -10,7 +10,7 @@ const ErrorPage = () => {
           <img src={gif} alt="gif" />
         </marquee>
         <h1>404 Page Not Found</h1>
-        <Link to="/home" className="uk-button hover-btn">
+        <Link to="/" className="uk-button hover-btn">
           Redirect to Home Page
         </Link>
       </div>

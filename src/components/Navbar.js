@@ -18,6 +18,13 @@ const Navbar = () => {
   const handleClick = () => {
     document.getElementById("offcanvas-push").setAttribute("bg-close");
   };
+
+  const [activeNavLink, setActiveNavLink] = useState("");
+
+  const handleNavLinkClick = (event) => {
+    const clickedNavLink = event.target.getAttribute("data-rr-ui-event-key");
+    setActiveNavLink(clickedNavLink);
+  };
   return (
     <>
       <header>
@@ -65,7 +72,7 @@ const Navbar = () => {
         >
           <div className="uk-navbar-left logo uk-flex">
             <FaChevronLeft color="#03041c" size="2rem" />
-            <span>
+            <span className="gradient">
               {" "}
               Aniket <br /> Tandukar{" "}
             </span>
@@ -74,34 +81,75 @@ const Navbar = () => {
               <FaChevronRight color="#03041c" size="2rem" />
             </div>
           </div>
-          <div className="uk-navbar-right uk-visible@s">
+
+          <div className="uk-navbar-right uk-visible@l">
             <ul className="uk-navbar-nav">
               <li>
-                <NavLink to="/home" activeclassname="active">
+                <a
+                  href="#home"
+                  data-rr-ui-event-key="home"
+                  onClick={handleNavLinkClick}
+                  className={activeNavLink === "home" ? "active" : ""}
+                >
                   Home
-                </NavLink>
+                </a>
               </li>
 
               <li>
-                <NavLink to="/about" activeclassname="active">
-                  About
-                </NavLink>
+                <a
+                  href="#skills"
+                  data-rr-ui-event-key="skills"
+                  onClick={handleNavLinkClick}
+                  className={activeNavLink === "skills" ? "active" : ""}
+                >
+                  Skills
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#experience"
+                  data-rr-ui-event-key="experience"
+                  onClick={handleNavLinkClick}
+                  className={activeNavLink === "experience" ? "active" : ""}
+                >
+                  Experience
+                </a>
               </li>
 
               <li>
-                <NavLink to="/project" activeclassname="active">
+                <a
+                  href="#projects"
+                  data-rr-ui-event-key="projects"
+                  onClick={handleNavLinkClick}
+                  className={activeNavLink === "projects" ? "active" : ""}
+                >
                   Projects
-                </NavLink>
+                </a>
               </li>
               <li>
-                <NavLink to="/contact" activeclassname="active">
+                <a
+                  href="#resume"
+                  data-rr-ui-event-key="resume"
+                  onClick={handleNavLinkClick}
+                  className={activeNavLink === "resume" ? "active" : ""}
+                >
+                  Resume
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  data-rr-ui-event-key="contact"
+                  onClick={handleNavLinkClick}
+                  className={activeNavLink === "contact" ? "active" : ""}
+                >
                   Contact
-                </NavLink>
+                </a>
               </li>
             </ul>
           </div>
 
-          <div className="uk-navbar-right uk-hidden@s">
+          <div className="uk-navbar-right uk-hidden@l">
             <button
               className="uk-button uk-button-default uk-margin-small-right hover-btn"
               type="button"
@@ -137,25 +185,36 @@ const Navbar = () => {
 
             <ul className="uk-navbar-nav uk-flex-column">
               <li>
-                <Link to="/home" onClick={handleClick}>
+                <a href="#home" onClick={handleClick}>
                   Home
-                </Link>
+                </a>
               </li>
 
               <li>
-                <Link to="/about" onClick={handleClick}>
-                  About
-                </Link>
+                <a href="#skills" onClick={handleClick}>
+                  Skills
+                </a>
               </li>
               <li>
-                <Link to="/project" onClick={handleClick}>
+                <a href="#experience" onClick={handleClick}>
+                  Experience
+                </a>
+              </li>
+
+              <li>
+                <a href="#projects" onClick={handleClick}>
                   Projects
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/contact" onClick={handleClick}>
+                <a href="#resume" onClick={handleClick}>
+                  Resume
+                </a>
+              </li>
+              <li>
+                <a href="#contact" onClick={handleClick}>
                   Contact
-                </Link>
+                </a>
               </li>
             </ul>
           </div>

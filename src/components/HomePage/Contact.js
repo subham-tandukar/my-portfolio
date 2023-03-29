@@ -5,9 +5,12 @@ import { HiOutlinePhone } from "react-icons/hi";
 import { GoMailRead } from "react-icons/go";
 import { BiMapPin } from "react-icons/bi";
 
-const Section6 = () => {
+const Contact = () => {
   return (
-    <div className="uk-container uk-container-expand projects">
+    <div
+      id="contact"
+      className="uk-container uk-container-expand uk-margin-medium-top uk-margin-medium-bottom"
+    >
       <div>
         <h5 className="txt">
           Contact Me <img src={loader} alt="" className="loader" />{" "}
@@ -17,7 +20,10 @@ const Section6 = () => {
       <div className="contact uk-grid uk-child-width-1-2@l uk-margin-medium-top">
         <div>
           <div className="uk-flex uk-flex-middle uk-flex-wrap uk-flex-around">
-            <div className="contact-info" uk-scrollspy="cls: uk-animation-slide-left">
+            <div
+              className="contact-info"
+              uk-scrollspy="cls: uk-animation-slide-left"
+            >
               <h5>Let's get in touch</h5>
 
               <div className="uk-flex uk-flex-middle uk-flex-wrap uk-margin-medium-top">
@@ -56,7 +62,10 @@ const Section6 = () => {
               </div>
             </div>
 
-            <div className="contact-img"   uk-scrollspy="cls: uk-animation-fade; delay: 500">
+            <div
+              className="contact-img"
+              uk-scrollspy="cls: uk-animation-fade; delay: 500"
+            >
               <img src={contact} alt="" />
             </div>
           </div>
@@ -80,4 +89,4 @@ const Section6 = () => {
   );
 };
 
-export default Section6;
+export default Contact;

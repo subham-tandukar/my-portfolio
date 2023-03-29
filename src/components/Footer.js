@@ -9,41 +9,7 @@ const Footer = () => {
   return (
     <>
       <footer className="footer">
-        <div className="uk-container uk-container-expand">
-          <div className="uk-flex uk-flex-wrap uk-flex-middle uk-flex-between">
-            <div>
-              <div className="logo uk-flex">
-                <FaChevronLeft color="#fff" size="1.3rem" />
-                <span>
-                  {" "}
-                  Aniket <br /> Tandukar{" "}
-                </span>
-                <div>
-                  <BsSlashLg className="slash" />
-                  <FaChevronRight color="#fff" size="2rem" />
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <ul className="uk-navbar-nav">
-                <li>
-                  <Link to="/home">Home</Link>
-                </li>
-
-                <li>
-                  <Link to="/about">About</Link>
-                </li>
-                <li>
-                  <Link to="/project">Projects</Link>
-                </li>
-                <li>
-                  <Link to="/contact">Contact</Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        
 
         <div className="foot">
           <div className="uk-grid ">
@@ -73,7 +39,7 @@ const Footer = () => {
 
             <div className="copyright uk-width-1-1 uk-width-1-2@s">
               <span>
-                Copyright &copy; 2022 by <strong>Aniket.</strong> All Rights
+                Copyright &copy; 2023 by <strong>Aniket.</strong> All Rights
                 Reserved.
               </span>
             </div>

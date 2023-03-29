@@ -5,6 +5,7 @@
 }
 
 $primary: #03041c;
+$gradient: linear-gradient(90.7deg, #1b2083 0%, #03041c 100%);
 $transition: all 0.3s cubic-bezier(0.21, 0.6, 0.44, 2.18);
 $transition2: all 0.3s ease-in-out;
 
@@ -36,6 +37,30 @@ h5 {
 span {
   color: #000;
 }
+p {
+  color: #555;
+  font-size: 14px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #ddd;
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+  background-color: #ddd;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: $primary;
+}
+body::-webkit-scrollbar {
+  width: 8px;
+}
 .active {
   color: $primary !important;
   font-weight: bold;
@@ -52,14 +77,25 @@ span {
   border: 1px solid $primary;
   color: $primary;
   background: transparent;
+  padding: 0 15px !important;
 
+  a {
+    color: $primary;
+    transition: $transition;
+    svg {
+      margin-left: 0.5rem;
+    }
+  }
+
+  &:hover a {
+    color: #fff;
+  }
   &:hover {
     color: #fff;
     transform: translateX(10px);
   }
   &:hover svg {
     color: #fff !important;
-    transform: translateX(10px) !important;
   }
   &::before {
     content: "";
@@ -69,7 +105,7 @@ span {
     top: 0;
     width: 0;
     height: 100%;
-    background-color: $primary;
+    background: $gradient;
     transition: 0.5s;
     z-index: -1;
   }
@@ -89,6 +125,12 @@ span {
     line-height: 20px;
     color: $primary;
     font-size: 25px;
+  }
+  .gradient {
+    background: $gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
   .slash {
     color: $primary;
@@ -120,7 +162,7 @@ span {
 
   .head-2 {
     padding: 1rem 3rem;
-    background: $primary;
+    background: $gradient;
     clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0% 100%);
     text-align: right;
     a {
@@ -134,6 +176,33 @@ span {
       }
     }
   }
+}
+
+nav::before {
+  content: "";
+  height: 70px;
+  width: 70px;
+  background-image: url(../src/img/profile.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transition: all 0.5s ease-in-out;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  border: 3px solid $primary;
+}
+
+.uk-active::before {
+  top: 70%;
+  opacity: 1;
+}
+
+.uk-navbar-nav > li > a {
+  text-transform: capitalize;
+  min-height: 70px;
 }
 
 .uk-navbar-nav > li:hover > a {
@@ -156,7 +225,7 @@ footer .uk-navbar-nav > li:hover > a:hover {
 }
 
 .uk-offcanvas-bar {
-  background: rgba(3, 4, 28, 1);
+  background: $gradient;
 }
 
 #offcanvas-push {
@@ -251,32 +320,32 @@ footer .uk-navbar-nav > li:hover > a:hover {
 @keyframes border-top {
   25% {
     width: 0;
-    background: $primary;
+    background: $gradient;
   }
 
   35% {
     width: 100%;
-    background: $primary;
+    background: $gradient;
   }
 
   50% {
-    background: $primary;
+    background: $gradient;
   }
 
   65% {
-    background: $primary;
+    background: $gradient;
   }
 
   75% {
     width: 100%;
-    background: $primary;
+    background: $gradient;
   }
 
   85% {
     left: auto;
     right: 0;
     width: 0;
-    background: $primary;
+    background: $gradient;
   }
 }
 
@@ -287,97 +356,97 @@ footer .uk-navbar-nav > li:hover > a:hover {
 
   15% {
     width: 100%;
-    background: $primary;
+    background: $gradient;
   }
 
   25% {
-    background: $primary;
+    background: $gradient;
   }
 
   35% {
-    background: $primary;
+    background: $gradient;
   }
 
   50% {
     width: 100%;
-    background: $primary;
+    background: $gradient;
   }
 
   65% {
     left: 0;
     width: 0;
-    background: $primary;
+    background: $gradient;
   }
 
   75% {
-    background: $primary;
+    background: $gradient;
   }
 }
 
 @keyframes border-left {
   15% {
     height: 0;
-    background: $primary;
+    background: $gradient;
   }
 
   25% {
     height: 100%;
-    background: $primary;
+    background: $gradient;
   }
 
   35% {
-    background: $primary;
+    background: $gradient;
   }
 
   50% {
-    background: $primary;
+    background: $gradient;
   }
 
   65% {
     height: 100%;
-    background: $primary;
+    background: $gradient;
   }
 
   75% {
     top: 0;
     height: 0;
-    background: $primary;
+    background: $gradient;
   }
 
   85% {
-    background: $primary;
+    background: $gradient;
   }
 }
 
 @keyframes border-right {
   35% {
     height: 0;
-    background: $primary;
+    background: $gradient;
   }
 
   50% {
     height: 100%;
-    background: $primary;
+    background: $gradient;
   }
 
   65% {
-    background: $primary;
+    background: $gradient;
   }
 
   75% {
-    background: $primary;
+    background: $gradient;
   }
 
   85% {
     height: 100%;
-    background: $primary;
+    background: $gradient;
   }
 
   100% {
     top: auto;
     bottom: 0;
     height: 0;
-    background: $primary;
+    background: $gradient;
   }
 }
 
@@ -434,7 +503,9 @@ footer .uk-navbar-nav > li:hover > a:hover {
     font-size: 30px;
   }
   p {
-    color: #555;
+    line-height: 30px;
+    text-align: justify;
+    font-size: 16px;
   }
 }
 .ham-menu {
@@ -447,246 +518,90 @@ marquee {
   }
 }
 
-.wrap {
-  overflow-x: hidden;
-}
+.skills {
+  padding-top: 6rem;
 
-.form-stepper {
-  margin-top: -61px;
-}
-
-.MuiStepIcon-root.MuiStepIcon-completed,
-.MuiStepIcon-root.MuiStepIcon-active {
-  color: $primary !important;
-}
-.MuiSvgIcon-root {
-  width: 1.3em !important;
-  height: 1.3em !important;
-}
-
-.css-eglki6-MuiLinearProgress-root,
-.css-7p5u54 {
-  background-color: transparent !important;
-  height: 9px !important;
-  border-radius: 500px;
-  margin-top: 1rem !important;
-}
-
-.css-5xe99f-MuiLinearProgress-bar1,
-.css-t752vm {
-  background-color: $primary !important;
-}
-
-.b {
-  padding-left: 5rem !important;
-}
-
-.l {
-  margin-left: 5rem;
-}
-.r {
-  margin-right: 7rem;
-}
-
-.skill-bar {
-  overflow: hidden;
-
-  .skill-txt {
-    h5 {
-      font-weight: bold;
-      margin: 0 0.5rem;
-    }
-    span {
-      font-style: italic;
-    }
-    .skill-icon {
-      animation: upDown 1s ease-in-out infinite alternate-reverse both;
-      margin-left: 0.5rem;
-    }
-  }
-
-  .skill-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #d9d9d9;
-    z-index: -1;
-    height: 9px;
-    border-radius: 500px;
-  }
-}
-@keyframes upDown {
-  from {
-    transform: translateY(0);
-    transform: scale(0.9);
-  }
-  from {
-    transform: translateY(13%);
-    transform: scale(1.1);
-  }
-}
-
-.skill-button {
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.prev,
-.next {
-  background: transparent;
-  transition: $transition2;
-  padding: 0;
-}
-
-.prev {
-  transform: rotate(90deg);
-  margin-left: 1rem;
-  &:hover {
-    transform: rotate(0deg);
-  }
-}
-.next {
-  transform: rotate(-90deg);
-  margin-right: 1rem;
-  &:hover {
-    transform: rotate(0deg);
-  }
-}
-.disable {
-  transform: rotate(0deg);
-  &:hover {
-    transform: rotate(0deg);
-  }
-}
-
-@keyframes animate {
-  from {
-    transform: translate(0);
-  }
-  from {
-    transform: translate(9%);
-  }
-}
-@keyframes animate2 {
-  from {
-    transform: rotate(0deg);
-  }
-  from {
-    transform: rotate(-9deg);
-  }
-}
-
-.exp,
-.edu {
-  .exp-img,
-  .edu-img {
-    img {
-      height: 300px;
+  .skill-wrapper {
+    .wrap {
+      cursor: pointer;
+      position: relative;
       width: 100%;
-      object-fit: cover;
-    }
-  }
-}
+      justify-content: center;
+      display: flex;
+      margin-top: 3rem;
+      .CircularProgressbar {
+        width: 130px;
+        height: 130px;
+        position: absolute;
+      }
+      .CircularProgressbar-text {
+        display: none;
+      }
 
-.edu,
-.exp {
-  align-items: center;
-  justify-content: space-between;
-  overflow: hidden;
-  .edu-info,
-  .exp-info {
-    padding: 1rem;
-    position: relative;
-
-    .edu-logo,
-    .exp-logo {
-      width: 40px;
-      height: 40px;
-      background: $primary;
-      border-radius: 50%;
-      color: #fff;
-      margin-right: 1rem;
-
-      .logo-wrap {
-        display: block;
-        margin: 0 auto;
-        height: 100%;
+      .skill-bg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 130px;
+        border: 11px solid #d6d6d6;
+        z-index: -1;
+        height: 130px;
+        border-radius: 500px;
+      }
+      .skill-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -70%);
+        width: 50%;
+        z-index: -1;
       }
     }
-    span {
-      color: #555;
-      font-style: italic;
-      font-size: 14px;
-    }
-    p {
-      margin: 0.3rem 0;
-      font-size: 16px;
-      color: #000;
-    }
-    h5 {
-      margin: 0;
-      font-size: 14px;
-      font-weight: bold;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      height: 100%;
-      width: 5px;
-      background-color: $primary;
-      top: 0;
-      left: 34px;
-      z-index: -1;
-    }
   }
 }
 
-.resume-img {
-  .animate {
-    animation: animate 2s ease-in-out infinite alternate-reverse both;
-  }
-  .animate2 {
-    transform-origin: center;
-    transform-style: preserve-3d;
-    animation: animate2 2s ease-in-out infinite alternate-reverse both;
-  }
-}
-@keyframes animateBtn {
-  from {
-    transform: translateY(0);
-  }
-  from {
-    transform: translateY(15%);
-  }
-}
-.resume-btn {
-  width: max-content;
-  background: transparent;
-  text-transform: capitalize;
-  position: relative;
-  z-index: 1;
+.experience {
+  padding-top: 6rem;
+  overflow: hidden;
 
-  .animate-btn {
-    animation: animateBtn 1s ease-in-out infinite alternate-reverse both;
-    transition: $transition2;
-    color: $primary;
-  }
+  .wrapper {
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15) !important;
+    border-radius: 0.375rem;
+    background: #fff;
+    padding: 2rem 3rem;
+    margin-bottom: 3rem;
 
-  h5 {
-    font-weight: bold;
-    margin: 0;
-    font-size: 20px;
-    transition: $transition2;
-  }
-
-  &:hover .animate-btn,
-  &:hover h5 {
-    color: #69b11a;
+    .exp-logo {
+      margin-right: 3rem;
+      img {
+        margin-bottom: 0.5rem;
+        width: 100px;
+        margin: 0 auto;
+        display: block;
+      }
+      h4 {
+        margin: 0.5rem;
+        margin-top: 1rem;
+        font-weight: bold;
+        text-align: center;
+      }
+      span {
+        font-size: 14px;
+        color: #555;
+        text-align: center;
+        display: block;
+      }
+    }
+    .exp-info {
+      h3 {
+        margin: 0.5rem 0;
+        font-weight: bold;
+      }
+      p {
+        text-align: justify;
+      }
+    }
   }
 }
 
@@ -725,129 +640,7 @@ marquee {
   }
 }
 
-.breadcrumb {
-  background: $primary;
-  padding: 2rem 0;
-  margin-bottom: 3rem;
-
-  h3 {
-    font-weight: bold;
-    color: #fff;
-    margin: 0;
-  }
-  span,
-  a {
-    color: #fff;
-    transition: $transition2;
-  }
-  a:hover {
-    text-decoration: none;
-    transform: translateX(5px);
-  }
-}
-
-.projects {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-
-  .project-swiper {
-    position: relative;
-    overflow: hidden;
-
-    .project-bg {
-      background: rgba(3, 4, 28, 0.8);
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      visibility: hidden;
-      transition: $transition2;
-    }
-    .project-link {
-      display: flex;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-
-      .web {
-        transition: all 0.3s ease-in-out;
-      }
-      .git {
-        transition: all 0.3s ease-in-out 0.3s;
-      }
-      .web,
-      .git {
-        margin-top: -200%;
-        width: 50px;
-        height: 50px;
-        background: #fff;
-        line-height: 50px;
-        border-radius: 50%;
-        margin-right: 0.5rem;
-        margin-left: 0.5rem;
-
-        a {
-          line-height: 50px;
-          text-align: center;
-          display: block;
-        }
-
-        &:hover {
-          transform: translateY(-10px);
-          transition: $transition !important;
-        }
-      }
-    }
-  }
-  .swiper-slide-active:hover .project-bg {
-    opacity: 1;
-    cursor: pointer;
-    visibility: visible;
-  }
-  .swiper-slide-active:hover .project-link > .web,
-  .swiper-slide-active:hover .project-link > .git {
-    margin-top: 0;
-  }
-  .swiper-slide {
-    opacity: 0.5;
-    transform: scale(0.7);
-    transition: all 0.7s ease-in-out;
-  }
-  .swiper-slide-active {
-    opacity: 1;
-    transform: scale(1);
-    transition: all 0.7s ease-in-out;
-  }
-  .swiper-button-next:after {
-    content: url(../src/img/btn.png);
-  }
-  .swiper-button-prev:after {
-    content: url(../src/img/btn2.png);
-  }
-  .swiper-button-next,
-  .swiper-button-prev {
-    top: 57%;
-    transition: $transition2;
-  }
-  .swiper-button-prev {
-    left: 20px;
-    &:hover {
-      transform: rotate(-90deg);
-    }
-  }
-  .swiper-button-next {
-    &:hover {
-      right: 20px;
-      transform: rotate(90deg);
-    }
-  }
-}
-
 .all-project-bg {
-  margin-top: 5rem;
   height: 50vh;
   background-image: url(./img/project.jpg);
   background-position: right;
@@ -866,7 +659,7 @@ marquee {
       span {
         font-size: 30px;
         font-weight: bold;
-        color: #555;
+        color: $primary;
       }
     }
   }
@@ -877,6 +670,124 @@ marquee {
 
   &:hover .project-bg-txt > .Typewriter > span {
     color: $primary;
+  }
+}
+
+.projects {
+  padding-top: 7rem;
+  .project-wrapper {
+    margin-top: 3rem;
+    .project-content {
+      cursor: pointer;
+      border-radius: 20px;
+      margin-bottom: 3rem;
+      transition: 0.4s ease-in-out transform;
+
+      .project-icon {
+        height: 30px;
+        border: 1px solid #d9d9d9;
+        padding: 0.3rem;
+        border-radius: 9px;
+        margin-right: 0.5rem;
+      }
+      a {
+        display: block;
+      }
+
+      h5 {
+        font-weight: bold;
+        padding: 1rem;
+        margin: 0;
+        padding-bottom: 0;
+        font-size: 18px;
+      }
+
+      span {
+        margin: 0;
+        padding: 1rem;
+        border-bottom: 1px solid #d9d9d9;
+        padding-top: 0.5rem;
+        display: inline-block;
+        color: #555;
+        font-size: 14px;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      .project-swiper {
+        position: relative;
+        overflow: hidden;
+
+        .project-bg {
+          background: linear-gradient(
+            90.7deg,
+            rgb(27, 32, 131, 0.8) 0%,
+            rgb(3, 4, 28, 0.8) 100%
+          );
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          visibility: hidden;
+          transition: $transition2;
+        }
+        .project-link {
+          display: flex;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          .web {
+            transition: all 0.3s ease-in-out;
+          }
+          .git {
+            transition: all 0.3s ease-in-out 0.3s;
+          }
+          .web,
+          .git {
+            margin-top: -200%;
+            width: 50px;
+            height: 50px;
+            background: #fff;
+            line-height: 50px;
+            border-radius: 50%;
+            margin-right: 0.5rem;
+            margin-left: 0.5rem;
+
+            a {
+              line-height: 50px;
+              text-align: center;
+              display: block;
+            }
+
+            &:hover {
+              transform: translateY(-10px);
+              transition: $transition !important;
+            }
+          }
+        }
+      }
+
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px #ebebeb;
+      }
+
+      &:hover .project-bg {
+        opacity: 1;
+        cursor: pointer;
+        visibility: visible;
+      }
+      &:hover .project-link > .web,
+      &:hover .project-link > .git {
+        margin-top: 0;
+      }
+    }
   }
 }
 
@@ -919,7 +830,7 @@ marquee {
 }
 
 .footer {
-  background: $primary;
+  background: $gradient;
   background-attachment: fixed;
   .logo {
     padding-left: 0;
@@ -940,7 +851,7 @@ marquee {
   }
 
   .foot {
-    border-top: 1px solid #fff;
+    border-top: 1px solid $primary;
     .social-links {
       padding-top: 0.5rem;
       padding-bottom: 0.5rem;
@@ -1008,7 +919,7 @@ marquee {
 
   .go-to-top-icon {
     font-size: 20px !important;
-    background: $primary;
+    background: $gradient;
     width: 40px;
     height: 40px;
     text-align: center;
@@ -1046,76 +957,6 @@ marquee {
   top: 0;
   left: 0;
   background: #fff;
-}
-
-.about_page {
-  padding-bottom: 3rem;
-  .skill-button {
-    display: none;
-  }
-}
-.project_page {
-  padding-bottom: 3rem;
-  .project-wrapper {
-    .project-content {
-      cursor: pointer;
-      transform: perspective(750px) translate3d(0px, 0px, -250px) rotateX(27deg)
-        scale(0.9, 0.9);
-      border-radius: 20px;
-
-      box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.2);
-      transition: 0.4s ease-in-out transform;
-
-      a {
-        display: block;
-      }
-
-      span {
-        margin: 0;
-        padding: 1rem;
-        display: inline-block;
-        transition: $transition2;
-        color: #000;
-
-        &:hover {
-          transform: translateX(10px);
-          text-decoration: none;
-        }
-      }
-
-      &:hover {
-        transform: translate3d(0px, 0px, -250px);
-      }
-    }
-  }
-}
-
-.project_details {
-  overflow: hidden;
-  img {
-    cursor: pointer;
-    transition: $transition2;
-
-    &:hover {
-      transform: scale(0.9);
-    }
-  }
-  p {
-    color: #555;
-  }
-  h3 {
-    font-weight: bold;
-    color: $primary;
-  }
-  .project-link {
-    display: inline-block;
-    margin-right: 1rem;
-    transition: $transition;
-
-    &:hover {
-      transform: translateY(-10px);
-    }
-  }
 }
 
 @import "responsive";

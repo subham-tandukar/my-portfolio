@@ -1,238 +1,176 @@
 import React, { useContext, useState, useEffect } from "react";
-import Context from "../context/context";
-import {
-  FaHandPointRight,
-  FaHandPointLeft,
-  FaCss3,
-  FaBootstrap,
-  FaReact,
-  FaSass,
-} from "react-icons/fa";
-import {
-  SiHtml5,
-  SiJavascript,
-  SiJquery,
-  SiPhp,
-  SiAdobephotoshop,
-} from "react-icons/si";
-import { FiFigma } from "react-icons/fi";
-import BorderLinearProgress from "@mui/material/LinearProgress";
+import loader from "../../img/loader.gif";
+// import CircularProgress from "@mui/material/CircularProgress";
+import Grid from "@mui/material/Grid";
+import react from "../../img/react.png";
+import html from "../../img/html.png";
+import css from "../../img/css.png";
+import sass from "../../img/sass.png";
+import js from "../../img/js.png";
+import jquery from "../../img/jquery.png";
+import bootstrap from "../../img/bootstrap.png";
+import php from "../../img/php.png";
+import ps from "../../img/ps.png";
+import figma from "../../img/figma.png";
+import api from "../../img/api.png";
+import db from "../../img/db.png";
+import mui from "../../img/mui.png";
+import git from "../../img/git.png";
+import uikit from "../../img/uikit.png";
+import seo from "../../img/seo.png";
+import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
+
+const skills = [
+  {
+    id: 1,
+    tooltip: "React",
+    value: 90,
+    icon: react,
+  },
+  {
+    id: 2,
+    tooltip: "HTML 5",
+    value: 95,
+    icon: html,
+  },
+  {
+    id: 3,
+    tooltip: "CSS 3",
+    value: 90,
+    icon: css,
+  },
+  {
+    id: 4,
+    tooltip: "Sass",
+    value: 80,
+    icon: sass,
+  },
+  {
+    id: 5,
+    tooltip: "Javascript",
+    value: 80,
+    icon: js,
+  },
+  {
+    id: 6,
+    tooltip: "Jquery",
+    value: 80,
+    icon: jquery,
+  },
+  {
+    id: 11,
+    tooltip: "API integration",
+    value: 75,
+    icon: api,
+  },
+  {
+    id: 12,
+    tooltip: "Mongo DB",
+    value: 75,
+    icon: db,
+  },
+  {
+    id: 7,
+    tooltip: "Bootstrap",
+    value: 90,
+    icon: bootstrap,
+  },
+  {
+    id: 15,
+    tooltip: "UI kit",
+    value: 90,
+    icon: uikit,
+  },
+  {
+    id: 8,
+    tooltip: "Php",
+    value: 50,
+    icon: php,
+  },
+  {
+    id: 13,
+    tooltip: "Material UI",
+    value: 85,
+    icon: mui,
+  },
+  {
+    id: 9,
+    tooltip: "Adobe Photoshop",
+    value: 75,
+    icon: ps,
+  },
+  {
+    id: 10,
+    tooltip: "Figma",
+    value: 90,
+    icon: figma,
+  },
+
+  {
+    id: 14,
+    tooltip: "Git",
+    value: 80,
+    icon: git,
+  },
+  {
+    id: 16,
+    tooltip: "Search Engine Optimization",
+    value: 70,
+    icon: seo,
+  },
+];
 
 const Skills = () => {
-  const { setStep } = useContext(Context);
-
-  const next = () => {
-    setStep(2);
-  };
-
+  const gradientStyles = buildStyles({
+    pathColor: `url(#gradient)`,
+  });
   return (
     <>
-      <div className=" uk-position-relative wrap">
-        <div className="uk-grid uk-child-width-1-2@s skill">
-          <div className="b">
-            <div className="skill-bar l">
-              <div className="uk-margin-top">
-                <div className="uk-flex uk-flex-middle skill-txt">
-                  <SiHtml5 color="#F25320" size="2rem" className="skill-icon" />
-                  <h5>HTML 5</h5>
-                  <span>(100%)</span>
-                </div>
-                <div className="uk-position-relative">
-                  <BorderLinearProgress
-                    variant="determinate"
-                    value={100}
-                    uk-scrollspy="cls: uk-animation-slide-left; repeat: true;"
-                  />
-                  <div className="skill-bg"></div>
-                </div>
-              </div>
-
-              <div className="uk-margin-top">
-                <div className="uk-flex uk-flex-middle skill-txt">
-                  <FaCss3 color="#2091EB" size="2rem" className="skill-icon" />
-                  <h5>CSS 3</h5>
-                  <span>(100%)</span>
-                </div>
-
-                <div className="uk-position-relative">
-                  <BorderLinearProgress
-                    variant="determinate"
-                    value={100}
-                    uk-scrollspy="cls: uk-animation-slide-left; repeat: true; delay:300"
-                  />
-                  <div className="skill-bg"></div>
-                </div>
-              </div>
-
-              <div className="uk-margin-top">
-                <div className="uk-flex uk-flex-middle skill-txt">
-                  <FaSass color="#C26191" size="2rem" className="skill-icon" />
-                  <h5>Sass</h5>
-                  <span>(100%)</span>
-                </div>
-
-                <div className="uk-position-relative">
-                  <BorderLinearProgress
-                    variant="determinate"
-                    value={100}
-                    uk-scrollspy="cls: uk-animation-slide-left; repeat: true; delay:600"
-                  />
-                  <div className="skill-bg"></div>
-                </div>
-              </div>
-
-              <div className="uk-margin-top">
-                <div className="uk-flex uk-flex-middle skill-txt">
-                  <SiJavascript
-                    color="#EAD41C"
-                    size="2rem"
-                    className="skill-icon"
-                  />
-                  <h5>Javascript</h5>
-                  <span>(90%)</span>
-                </div>
-
-                <div className="uk-position-relative">
-                  <BorderLinearProgress
-                    variant="determinate"
-                    value={90}
-                    uk-scrollspy="cls: uk-animation-slide-left; repeat: true; delay:900"
-                  />
-                  <div className="skill-bg"></div>
-                </div>
-              </div>
-
-              <div className="uk-margin-top">
-                <div className="uk-flex uk-flex-middle skill-txt">
-                  <SiJquery
-                    color="#1F5B93"
-                    size="2rem"
-                    className="skill-icon"
-                  />
-                  <h5>Jquery</h5>
-                  <span>(95%)</span>
-                </div>
-
-                <div className="uk-position-relative">
-                  <BorderLinearProgress
-                    variant="determinate"
-                    value={95}
-                    uk-scrollspy="cls: uk-animation-slide-left; repeat: true; delay:1200"
-                  />
-                  <div className="skill-bg"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="b rb">
-            <div className="skill-bar r">
-              <div className="uk-margin-top">
-                <div className="uk-flex uk-flex-middle skill-txt">
-                  <FaBootstrap
-                    color="#7210EB"
-                    size="2rem"
-                    className="skill-icon"
-                  />
-                  <h5>Bootstrap</h5>
-                  <span>(100%)</span>
-                </div>
-
-                <div className="uk-position-relative">
-                  <BorderLinearProgress
-                    variant="determinate"
-                    value={100}
-                    uk-scrollspy="cls: uk-animation-slide-left; repeat: true; delay:1500"
-                  />
-                  <div className="skill-bg"></div>
-                </div>
-              </div>
-              <div className="uk-margin-top">
-                <div className="uk-flex uk-flex-middle skill-txt">
-                  <FaReact color="#5CCFEE" size="2rem" className="skill-icon" />
-                  <h5>React</h5>
-                  <span>(95%)</span>
-                </div>
-
-                <div className="uk-position-relative">
-                  <BorderLinearProgress
-                    variant="determinate"
-                    value={95}
-                    uk-scrollspy="cls: uk-animation-slide-left; repeat: true; delay:1800"
-                  />
-                  <div className="skill-bg"></div>
-                </div>
-              </div>
-
-              <div className="uk-margin-top">
-                <div className="uk-flex uk-flex-middle skill-txt">
-                  <SiPhp color="#3460A6" size="2rem" className="skill-icon" />
-                  <h5>Php</h5>
-                  <span>(50%)</span>
-                </div>
-
-                <div className="uk-position-relative">
-                  <BorderLinearProgress
-                    variant="determinate"
-                    value={50}
-                    uk-scrollspy="cls: uk-animation-slide-left; repeat: true; delay:2100"
-                  />
-                  <div className="skill-bg"></div>
-                </div>
-              </div>
-
-              <div className="uk-margin-top">
-                <div className="uk-flex uk-flex-middle skill-txt">
-                  <SiAdobephotoshop
-                    color="#061D32"
-                    size="2rem"
-                    className="skill-icon"
-                  />
-                  <h5>Adobe Photoshop</h5>
-                  <span>(100%)</span>
-                </div>
-
-                <div className="uk-position-relative">
-                  <BorderLinearProgress
-                    variant="determinate"
-                    value={100}
-                    uk-scrollspy="cls: uk-animation-slide-left; repeat: true; delay:2400"
-                  />
-                  <div className="skill-bg"></div>
-                </div>
-              </div>
-
-              <div className="uk-margin-top">
-                <div className="uk-flex uk-flex-middle skill-txt">
-                  <FiFigma color="#34293C" size="2rem" className="skill-icon" />
-                  <h5>Figma</h5>
-                  <span>(100%)</span>
-                </div>
-
-                <div className="uk-position-relative">
-                  <BorderLinearProgress
-                    variant="determinate"
-                    value={100}
-                    uk-scrollspy="cls: uk-animation-slide-left; repeat: true; delay:2700"
-                  />
-                  <div className="skill-bg"></div>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div id="skills" className="uk-container uk-container-expand skills">
+        <div>
+          <h5 className="txt">
+            Skills <img src={loader} alt="" className="loader" />{" "}
+          </h5>
         </div>
 
-        <div className="uk-flex uk-flex-between uk-flex-middle skill-button">
-          <button disabled className="prev uk-button disable">
-            <FaHandPointLeft color="rgba(0, 0, 0, 0.38)" size="3rem" />
-          </button>
-          <button
-            onClick={next}
-            className="next uk-button"
-            uk-tooltip="title: Next"
-          >
-            <FaHandPointRight color="#03041c" size="3rem" />
-          </button>
+        <div
+          className="skill-wrapper"
+          uk-scrollspy="cls: uk-animation-fade; target: .wrap; delay: 300; repeat: false"
+        >
+          <Grid container spacing={2}>
+            {skills.map((data) => {
+              const { id, tooltip, value, icon } = data;
+              return (
+                <Grid item xs={6} sm={4} md={3} lg={2} key={id}>
+                  <div className="wrap" uk-tooltip={tooltip}>
+                    <svg>
+                      <defs>
+                        <linearGradient
+                          id="gradient"
+                          x1="0%"
+                          y1="0%"
+                          x2="100%"
+                          y2="0%"
+                        >
+                          <stop offset="0%" stopColor="#1B2083" />
+                          <stop offset="100%" stopColor="#03041C" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                    <CircularProgressbar
+                      value={value}
+                      styles={gradientStyles}
+                    />
+
+                    <div className="skill-icon">
+                      <img src={icon} className="skill-icon" />
+                    </div>
+                  </div>
+                </Grid>
+              );
+            })}
+          </Grid>
         </div>
       </div>
     </>
