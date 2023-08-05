@@ -9,7 +9,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="uk-container uk-container-expand uk-margin-medium-top uk-margin-medium-bottom"
+      className="uk-container   "
     >
       <div>
         <h5 className="txt">
@@ -17,8 +17,8 @@ const Contact = () => {
         </h5>
       </div>
 
-      <div className="contact uk-grid uk-child-width-1-2@l uk-margin-medium-top">
-        <div>
+      <div className="contact uk-grid uk-margin-medium-top ">
+        <div className="uk-width-expand">
           <div className="uk-flex uk-flex-middle uk-flex-wrap uk-flex-around">
             <div
               className="contact-info"
@@ -71,7 +71,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="uk-overflow-hidden map">
+        <div className="uk-overflow-hidden map uk-width-1-4@l">
           <h5 className="uk-margin-bottom">View on Map</h5>
 
           <iframe
@@ -82,9 +82,11 @@ const Contact = () => {
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
+            title="map"
           ></iframe>
         </div>
       </div>
+
     </div>
   );
 };

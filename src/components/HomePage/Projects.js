@@ -3,14 +3,16 @@ import loader from "../../img/loader.gif";
 import easyOffice from "../../img/easyOffice.png";
 import htdrl from "../../img/htdrl.png";
 import cooperative from "../../img/cooperative.png";
-import ecommerce from "../../img/ecommerce.png";
+import tictactoe from "../../img/tictactoe.png";
 import landingPage from "../../img/landingPage.png";
 import taprizaSchool from "../../img/taprizaSchool.png";
 import OGM from "../../img/OGM.png";
+import postbook from "../../img/postbook.png";
 import dayaFoundation from "../../img/dayaFoundation.png";
+import euroasia from "../../img/euroasia.png";
 import adminPanel from "../../img/adminPanel.png";
 import react from "../../img/react.png";
-import tashi from "../../img/tashi.png";
+import accor from "../../img/accor.png";
 import { GoGlobe } from "react-icons/go";
 import { BsGithub } from "react-icons/bs";
 import api from "../../img/api.png";
@@ -21,8 +23,55 @@ import sass from "../../img/sass.png";
 import js from "../../img/js.png";
 import mui from "../../img/mui.png";
 import php from "../../img/php.png";
+import next from "../../img/nextjs.png";
+import wordpress from "../../img/wordpress.png";
+import tailwind from "../../img/tailwind.png";
 
 const project = [
+  {
+    id: 3,
+    img: tictactoe,
+    title: "Tic Tac Toe",
+    desc: "I developed a Tic Tac Toe game that offers both single player and two player modes. In single player mode, players can choose between easy and hard difficulty levels. I showcased my frontend development skills, game logic understanding, user interface design, and AI algorithm implementation.",
+    web: "https://subham-tandukar-games.netlify.app/",
+    git: "https://github.com/subham-tandukar/tic-tac-toe",
+    icon: (
+      <div>
+        <img className="project-icon" src={react} alt="" uk-tooltip="React" />
+        <img className="project-icon" src={html} alt="" uk-tooltip="HTML" />
+        <img className="project-icon" src={css} alt="" uk-tooltip="Css" />
+        <img className="project-icon" src={js} alt="" uk-tooltip="Javascript" />
+      </div>
+    ),
+  },
+  {
+    id: 12,
+    img: postbook,
+    title: "Post Book",
+    desc: "I have created a goggle authentication and crud application using next js where you can sign in with your google account and create a post where you can edit and delete it. Also you can view other people's profile.",
+    web: "https://post-book.vercel.app/",
+    git: "https://github.com/subham-tandukar/PostBook",
+    icon: (
+      <div>
+        <img className="project-icon" src={next} alt="" uk-tooltip="Next JS" />
+        <img className="project-icon" src={html} alt="" uk-tooltip="HTML" />
+        <img className="project-icon" src={css} alt="" uk-tooltip="CSS" />
+        <img
+          className="project-icon"
+          src={api}
+          alt=""
+          uk-tooltip="API Integration"
+        />
+        <img className="project-icon" src={db} alt="" uk-tooltip="Mongo DB" />
+        <img
+          className="project-icon"
+          src={tailwind}
+          alt=""
+          uk-tooltip="Tailwind CSS"
+        />
+      </div>
+    ),
+  },
   {
     id: 7,
     img: htdrl,
@@ -48,21 +97,6 @@ const project = [
           alt=""
           uk-tooltip="Material UI"
         />
-      </div>
-    ),
-  },
-  {
-    id: 3,
-    img: ecommerce,
-    title: "Ecommerce",
-    desc: "Simple user authentication and login to ecommerce website created using HTML, CSS, and JavaScript",
-    web: "https://subham-tandukar.github.io/ecommerce/",
-    git: "https://github.com/subham-tandukar/ecommerce",
-    icon: (
-      <div>
-        <img className="project-icon" src={html} alt="" uk-tooltip="HTML" />
-        <img className="project-icon" src={css} alt="" uk-tooltip="Css" />
-        <img className="project-icon" src={js} alt="" uk-tooltip="Javascript" />
       </div>
     ),
   },
@@ -95,6 +129,42 @@ const project = [
     desc: "Web designed for a software company created using HTML, CSS and JavaScript.",
     web: "https://easysoftware.com.np/",
     git: "https://github.com/subham-tandukar/easy-software",
+    icon: (
+      <div>
+        <img className="project-icon" src={html} alt="" uk-tooltip="HTML" />
+        <img className="project-icon" src={css} alt="" uk-tooltip="Css" />
+        <img className="project-icon" src={js} alt="" uk-tooltip="Javascript" />
+      </div>
+    ),
+  },
+  {
+    id: 10,
+    img: accor,
+    title: "Accor",
+    desc: "Web designed for a travel and tourism company created using Wordpress, Php, CSS and JavaScript.",
+    web: "http://accor.genesiswtech.com/",
+    // git: "https://github.com/subham-tandukar/easy-software",
+    icon: (
+      <div>
+        <img
+          className="project-icon"
+          src={wordpress}
+          alt=""
+          uk-tooltip="Wordpress"
+        />
+        <img className="project-icon" src={php} alt="" uk-tooltip="Php" />
+        <img className="project-icon" src={css} alt="" uk-tooltip="Css" />
+        <img className="project-icon" src={js} alt="" uk-tooltip="Javascript" />
+      </div>
+    ),
+  },
+  {
+    id: 11,
+    img: euroasia,
+    title: "Euroasia",
+    desc: "Web designed for a travel and tourism company created using Html, CSS and JavaScript.",
+    web: "https://euroasia.netlify.app/",
+    git: "https://github.com/subham-tandukar/euroasia",
     icon: (
       <div>
         <img className="project-icon" src={html} alt="" uk-tooltip="HTML" />
@@ -186,7 +256,7 @@ const project = [
 const Projects = () => {
   return (
     <>
-      <div id="projects" className="uk-container uk-container-expand projects">
+      <div id="projects" className="uk-container projects">
         <div>
           <h5 className="txt">
             My Projects <img src={loader} alt="" className="loader" />{" "}
@@ -209,16 +279,18 @@ const Projects = () => {
                         <div className="project-bg"></div>
                         <div className="project-link">
                           <div className="web" uk-tooltip="title: Website">
-                            <a href={web} target="_blank">
+                            <a href={web} target="_blank" rel="noreferrer">
                               <GoGlobe color="#03041c" size="2rem" />
                             </a>
                           </div>
 
-                          <div className="git" uk-tooltip="title: Github">
-                            <a href={git} target="_blank">
-                              <BsGithub color="#03041c" size="2rem" />
-                            </a>
-                          </div>
+                          {git && (
+                            <div className="git" uk-tooltip="title: Github">
+                              <a href={git} target="_blank" rel="noreferrer">
+                                <BsGithub color="#03041c" size="2rem" />
+                              </a>
+                            </div>
+                          )}
                         </div>
                       </div>
                       <h5>{title}</h5>

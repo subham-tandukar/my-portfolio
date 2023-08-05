@@ -10,7 +10,8 @@ $transition: all 0.3s cubic-bezier(0.21, 0.6, 0.44, 2.18);
 $transition2: all 0.3s ease-in-out;
 
 @import url("https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap");
 
 html {
   scroll-behavior: smooth;
@@ -24,7 +25,7 @@ h4,
 h5,
 span,
 a {
-  font-family: "Montserrat", sans-serif !important;
+  font-family: "Kanit", sans-serif !important;
 }
 
 h1,
@@ -33,6 +34,7 @@ h3,
 h4,
 h5 {
   color: $primary;
+  font-family: "Kalam", cursive !important;
 }
 span {
   color: #000;
@@ -61,10 +63,10 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar {
   width: 8px;
 }
-.active {
-  color: $primary !important;
-  font-weight: bold;
-}
+// .active {
+//   color: $primary !important;
+//   font-weight: bold;
+// }
 .uk-active {
   box-shadow: 0 -2px 5px #555;
 }
@@ -177,7 +179,9 @@ body::-webkit-scrollbar {
     }
   }
 }
-
+.uk-navbar-container {
+  padding: 10px 0;
+}
 nav::before {
   content: "";
   height: 70px;
@@ -202,18 +206,55 @@ nav::before {
 
 .uk-navbar-nav > li > a {
   text-transform: capitalize;
-  min-height: 70px;
+  min-height: 0;
+  color: #a5a5a5;
+  position: relative;
+  transition: all 0.3s ease;
+  padding: 10px 15px;
+  display: block;
+  white-space: nowrap;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Kalam", cursive !important;
 }
-
-.uk-navbar-nav > li:hover > a {
-  transition: $transition;
+.uk-navbar-nav > li > a::after {
+  content: " ";
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: $primary;
 }
-
-.uk-navbar-nav > li:hover > a:hover {
-  transform: translateX(10px);
+.uk-navbar-nav > li.uk-active {
+  box-shadow: none;
+  a::after {
+    width: 100%;
+  }
+}
+.uk-navbar-nav > li.uk-active a,
+.uk-navbar-nav > li:hover a {
   color: $primary;
-  font-weight: bold;
 }
+.uk-navbar-nav > li > a:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+}
+
+// .uk-navbar-nav > li:hover > a {
+//   transition: $transition;
+// }
+
+// .uk-navbar-nav > li:hover > a:hover {
+//   transform: translateX(10px);
+//   color: $primary;
+//   font-weight: bold;
+// }
 footer .uk-navbar-nav > li:hover > a:hover {
   transform: translateX(10px);
   color: #fff;
@@ -564,13 +605,13 @@ marquee {
 .experience {
   padding-top: 6rem;
   overflow: hidden;
+  padding-bottom: 3rem;
 
   .wrapper {
     box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15) !important;
     border-radius: 0.375rem;
     background: #fff;
     padding: 2rem 3rem;
-    margin-bottom: 3rem;
 
     .exp-logo {
       margin-right: 3rem;
@@ -750,7 +791,7 @@ marquee {
           }
           .web,
           .git {
-            margin-top: -200%;
+            margin-top: -300%;
             width: 50px;
             height: 50px;
             background: #fff;
@@ -789,6 +830,11 @@ marquee {
       }
     }
   }
+}
+
+#contact {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
 }
 
 .contact {

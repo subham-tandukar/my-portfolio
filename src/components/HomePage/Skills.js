@@ -1,12 +1,13 @@
-import React, { useContext, useState, useEffect } from "react";
+import React from "react";
 import loader from "../../img/loader.gif";
-// import CircularProgress from "@mui/material/CircularProgress";
 import Grid from "@mui/material/Grid";
 import react from "../../img/react.png";
+import nextjs from "../../img/nextjs.png";
 import html from "../../img/html.png";
 import css from "../../img/css.png";
 import sass from "../../img/sass.png";
 import js from "../../img/js.png";
+import wordpress from "../../img/wordpress.png";
 import jquery from "../../img/jquery.png";
 import bootstrap from "../../img/bootstrap.png";
 import php from "../../img/php.png";
@@ -17,11 +18,17 @@ import db from "../../img/db.png";
 import mui from "../../img/mui.png";
 import git from "../../img/git.png";
 import uikit from "../../img/uikit.png";
-import seo from "../../img/seo.png";
+import tailwind from "../../img/tailwind.png";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
 const skills = [
+  {
+    id: 17,
+    tooltip: "Next JS",
+    value: 50,
+    icon: nextjs,
+  },
   {
     id: 1,
     tooltip: "React",
@@ -83,10 +90,22 @@ const skills = [
     icon: uikit,
   },
   {
+    id: 16,
+    tooltip: "Tailwind CSS",
+    value: 70,
+    icon: tailwind,
+  },
+  {
     id: 8,
     tooltip: "Php",
     value: 50,
     icon: php,
+  },
+  {
+    id: 18,
+    tooltip: "Wordpress",
+    value: 50,
+    icon: wordpress,
   },
   {
     id: 13,
@@ -113,12 +132,6 @@ const skills = [
     value: 80,
     icon: git,
   },
-  {
-    id: 16,
-    tooltip: "Search Engine Optimization",
-    value: 70,
-    icon: seo,
-  },
 ];
 
 const Skills = () => {
@@ -127,7 +140,7 @@ const Skills = () => {
   });
   return (
     <>
-      <div id="skills" className="uk-container uk-container-expand skills">
+      <div id="skills" className="uk-container skills">
         <div>
           <h5 className="txt">
             Skills <img src={loader} alt="" className="loader" />{" "}

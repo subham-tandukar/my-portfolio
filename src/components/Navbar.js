@@ -19,12 +19,6 @@ const Navbar = () => {
     document.getElementById("offcanvas-push").setAttribute("bg-close");
   };
 
-  const [activeNavLink, setActiveNavLink] = useState("");
-
-  const handleNavLinkClick = (event) => {
-    const clickedNavLink = event.target.getAttribute("data-rr-ui-event-key");
-    setActiveNavLink(clickedNavLink);
-  };
   return (
     <>
       <header>
@@ -83,13 +77,11 @@ const Navbar = () => {
           </div>
 
           <div className="uk-navbar-right uk-visible@l">
-            <ul className="uk-navbar-nav">
+            <ul className="uk-navbar-nav" data-uk-scrollspy-nav="closest: li; scroll: true;offset:20">
               <li>
                 <a
                   href="#home"
-                  data-rr-ui-event-key="home"
-                  onClick={handleNavLinkClick}
-                  className={activeNavLink === "home" ? "active" : ""}
+                  
                 >
                   Home
                 </a>
@@ -98,9 +90,7 @@ const Navbar = () => {
               <li>
                 <a
                   href="#skills"
-                  data-rr-ui-event-key="skills"
-                  onClick={handleNavLinkClick}
-                  className={activeNavLink === "skills" ? "active" : ""}
+                 
                 >
                   Skills
                 </a>
@@ -108,9 +98,7 @@ const Navbar = () => {
               <li>
                 <a
                   href="#experience"
-                  data-rr-ui-event-key="experience"
-                  onClick={handleNavLinkClick}
-                  className={activeNavLink === "experience" ? "active" : ""}
+                  
                 >
                   Experience
                 </a>
@@ -119,9 +107,7 @@ const Navbar = () => {
               <li>
                 <a
                   href="#projects"
-                  data-rr-ui-event-key="projects"
-                  onClick={handleNavLinkClick}
-                  className={activeNavLink === "projects" ? "active" : ""}
+                 
                 >
                   Projects
                 </a>
@@ -129,9 +115,7 @@ const Navbar = () => {
               <li>
                 <a
                   href="#resume"
-                  data-rr-ui-event-key="resume"
-                  onClick={handleNavLinkClick}
-                  className={activeNavLink === "resume" ? "active" : ""}
+                 
                 >
                   Resume
                 </a>
@@ -139,9 +123,7 @@ const Navbar = () => {
               <li>
                 <a
                   href="#contact"
-                  data-rr-ui-event-key="contact"
-                  onClick={handleNavLinkClick}
-                  className={activeNavLink === "contact" ? "active" : ""}
+                 
                 >
                   Contact
                 </a>

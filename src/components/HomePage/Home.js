@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import dp from "../../img/dp.png";
 import $ from "jquery";
 import { IoIosClose } from "react-icons/io";
@@ -20,20 +20,6 @@ const Home = () => {
     });
   });
 
-  const onButtonClick = () => {
-    // using Java Script method to get PDF file
-    fetch("resume.pdf").then((response) => {
-      response.blob().then((blob) => {
-        // Creating new object of PDF file
-        const fileURL = window.URL.createObjectURL(blob);
-        // Setting various property values
-        let alink = document.createElement("a");
-        alink.href = fileURL;
-        alink.download = "resume.pdf";
-        alink.click();
-      });
-    });
-  };
   return (
     <>
       <section className="main" id="home">
@@ -68,7 +54,7 @@ const Home = () => {
                 className="uk-button hover-btn"
                 uk-tooltip="title: Github; pos: top"
               >
-                <a href="https://github.com/subham-tandukar" target="_blank">View on Github <AiFillGithub size="1.5rem"/></a>
+                <a href="https://github.com/subham-tandukar" target="_blank" rel="noreferrer">View on Github <AiFillGithub size="1.5rem"/></a>
               </button>
             </div>
           </div>
