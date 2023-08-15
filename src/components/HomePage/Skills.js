@@ -37,7 +37,7 @@ const skills = [
   },
   {
     id: 2,
-    tooltip: "HTML 5",
+    tooltip: "React",
     value: 95,
     icon: html,
   },

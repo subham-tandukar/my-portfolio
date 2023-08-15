@@ -900,6 +900,27 @@ marquee img {
   background: #fff;
 }
 
+.new__portfolio {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(180deg, #FBE2E3, #DBD7FB);
+}
+.new__portfolio .txt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.new__portfolio .txt h1 {
+  font-weight: bold;
+}
+.new__portfolio a {
+  font-weight: normal;
+}
+
 @media (max-width: 1399.9px) {
   .contact .contact-img img {
     height: 200px;
